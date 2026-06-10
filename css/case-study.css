@@ -15,7 +15,7 @@
   a{ color:inherit; }
   p{ margin:0; }
 
-  .nav .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 32px; }
+  .nav .wrap { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
 
   .cs-intro-head {
     display: flex;

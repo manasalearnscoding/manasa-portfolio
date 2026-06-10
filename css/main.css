@@ -18,7 +18,7 @@
   --forest-dark: #6a9a8a;
 
   --shadow: 0 2px 4px oklch(0 0 0 / 0.04), 0 8px 24px oklch(0 0 0 / 0.07);
-  --maxw:  1200px;
+  --maxw:  1120px;
   --r:     10px;
   --r-btn: 8px;
 
@@ -180,11 +180,12 @@ img { max-width: 100%; display: block; }
 .timeline { position: relative; margin-top: 56px; }
 .tl-spine {
   position: absolute; top: 0; bottom: 0; left: 50%; width: 2px;
-  transform: translateX(-50%); background: var(--line); border-radius: 2px;
+  transform: translateX(-50%); border-radius: 2px; z-index: 0;
+  background: linear-gradient(to bottom, var(--line) 85%, transparent 100%);
 }
 .tl-fill {
   position: absolute; top: 0; left: 50%; width: 2px; height: 0;
-  transform: translateX(-50%); background: var(--accent); border-radius: 2px; will-change: height;
+  transform: translateX(-50%); background: var(--accent); border-radius: 2px; will-change: height; z-index: 0;
 }
 .tl-dot {
   position: absolute; left: 50%; top: 0; width: 18px; height: 18px; border-radius: 999px;
@@ -326,65 +327,6 @@ img { max-width: 100%; display: block; }
 .about-words b { font-style: normal; font-weight: 800; color: var(--accent); }
 
 /* ============================================================
-   SIDEQUESTS — door
-   ============================================================ */
-.sidequests {
-  min-height: 75vh; display: flex; align-items: center;
-  position: relative; overflow: hidden; background: var(--forest);
-  color: var(--ink);
-}
-.sidequests .section-label { color: var(--ink-3); }
-.sidequests .section-label .orn { color: var(--accent); }
-.sidequests .section-label::after { background: var(--ink); opacity: .14; }
-.sq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; width: 100%; }
-.sq-copy .psst {
-  font-family: var(--font-display);
-  font-size: clamp(28px,4vw,46px); font-weight: 800; letter-spacing: -.02em; color: var(--ink);
-}
-.sq-copy p { margin-top: 14px; color: var(--ink-2); max-width: 34ch; font-size: 17px; }
-.sq-hint {
-  margin-top: 22px; display: inline-flex; align-items: center; gap: 8px;
-  color: var(--ink-3); font: 500 13px/1 var(--font-mono);
-}
-
-.door-zone { display: grid; place-items: center; }
-.door-btn {
-  appearance: none; border: 0; background: transparent; cursor: pointer; padding: 0;
-  display: block; position: relative; transition: transform .3s var(--ease);
-}
-.door-btn:hover { transform: translateY(-4px); }
-.door-frame {
-  width: 200px; height: 300px; border-radius: 100px 100px 8px 8px;
-  background: #6a9a8a; border: 3px solid #4a7a6a; position: relative; box-shadow: var(--shadow);
-}
-.door-panel {
-  position: absolute; inset: 12px; border-radius: 88px 88px 4px 4px;
-  background: #5a8a7a; border: 2px solid #4a7a6a;
-  transform-origin: left center; transition: transform .6s var(--ease), background .4s var(--ease);
-}
-.door-btn:hover .door-panel { transform: perspective(900px) rotateY(-24deg); background: #6a9a8a; }
-.door-light {
-  position: absolute; inset: 12px; border-radius: 88px 88px 4px 4px;
-  background: radial-gradient(120% 100% at 50% 40%, var(--accent-soft), transparent 70%);
-  opacity: 0; transition: opacity .5s var(--ease);
-}
-.door-btn:hover .door-light { opacity: 1; }
-.door-knob {
-  position: absolute; right: 26px; top: 50%; width: 13px; height: 13px; border-radius: 999px;
-  background: var(--accent); transform: translateY(-50%); z-index: 2;
-}
-.door-shadow {
-  width: 160px; height: 26px; margin: 14px auto 0; border-radius: 999px;
-  background: radial-gradient(closest-side, oklch(0.14 0.03 55 / 0.18), transparent);
-}
-.door-label {
-  margin-top: 18px; text-align: center;
-  font: 500 12px/1 var(--font-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3);
-}
-
-
-
-/* ============================================================
    CONTACT — dark ink
    ============================================================ */
 .contact {
@@ -433,7 +375,6 @@ img { max-width: 100%; display: block; }
   .tl-row.in .tl-card { transform: none; }
   .tl-spine, .tl-fill, .tl-dot, .tl-node { display: none; }
   .skills-grid { grid-template-columns: 1fr; gap: 36px; }
-  .sq-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; align-items: start; }
 }
 

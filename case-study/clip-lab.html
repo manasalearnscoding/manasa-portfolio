@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI Research Assistant — Manasa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lora:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../css/nav.css" />
+<link rel="stylesheet" href="../css/case-study.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+      <span class="nav-toggle-icon" aria-hidden="true">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </span>
+    </button>
+    <a class="brand" href="../index.html">Manasa</a>
+    <nav class="nav-primary" id="navMenu" aria-label="Primary">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#work">Highlights</a></li>
+        <li><a href="../work.html">All Work</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <a class="btn-resume" href="../Manasa_PM_Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open résumé (PDF)">Résumé</a>
+      <a class="icon-btn" href="https://www.linkedin.com/in/manasavk" aria-label="LinkedIn profile" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5.001A2.5 2.5 0 014.98 3.5zM3 9h4v12H3V9zm6 0h3.8v1.7h.05c.53-1 1.82-2.05 3.75-2.05C20.4 8.65 22 10.6 22 14.1V21h-4v-6.1c0-1.45-.03-3.3-2-3.3-2 0-2.3 1.56-2.3 3.2V21H9V9z"/></svg>
+      </a>
+      <a class="icon-btn" href="https://www.github.com/manasalearnscoding" aria-label="GitHub profile" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 1.8a10.2 10.2 0 00-3.22 19.88c.5.1.69-.22.69-.48v-1.7c-2.83.62-3.43-1.36-3.43-1.36-.46-1.18-1.13-1.5-1.13-1.5-.93-.63.07-.62.07-.62 1.02.07 1.56 1.05 1.56 1.05.91 1.56 2.39 1.11 2.97.85.09-.66.36-1.11.64-1.36-2.26-.26-4.64-1.13-4.64-5.03 0-1.11.4-2.02 1.05-2.73-.11-.26-.46-1.3.1-2.7 0 0 .85-.27 2.8 1.04a9.7 9.7 0 015.1 0c1.95-1.31 2.8-1.04 2.8-1.04.56 1.4.21 2.44.1 2.7.65.71 1.05 1.62 1.05 2.73 0 3.91-2.38 4.77-4.65 5.02.37.32.69.94.69 1.9v2.82c0 .27.18.59.7.48A10.2 10.2 0 0012 1.8z"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="nav-backdrop" id="navBackdrop" hidden></div>
+</header>
+
+<div class="page">
+
+  <!-- HERO -->
+  <header class="cs-hero">
+    <div class="cs-intro-head">
+      <a class="page-back" id="csBack" href="../work.html" aria-label="Back to all work">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3L5 8l5 5"/></svg>
+        All work
+      </a>
+      <div class="cs-eyebrow" id="csEyebrow">Case study</div>
+    </div>
+    <h1 class="cs-title" id="csTitle">Undergraduate AI Research Assistant</h1>
+    <div class="cs-company" id="csCompany">CLIP Lab, UMIACS — University of Maryland</div>
+    <div class="cs-outcome" id="csOutcome">
+      <b>TL;DR:</b> Built a mechanistic interpretability framework to trace how gender bias emerges and is suppressed inside transformer networks — using causal tracing, activation patching, and vocabulary projection on LLaMA-2-7B - and co-authored a paper proposing it as a generalizable analysis framework for AI safety research.
+    </div>
+    <dl class="cs-meta-strip" id="csMeta">
+      <div class="meta-item"><dt>My role</dt><dd id="metaRole">AI Undergraduate Researcher</dd></div>
+      <div class="meta-item"><dt>Timeline</dt><dd id="metaTimeline">11 months · 2025</dd></div>
+      <div class="meta-item"><dt>Team</dt><dd id="metaTeam">Prof. Hal Daumé III · PhD mentor Navita · UMIACS</dd></div>
+      <div class="meta-item"><dt>Platform</dt><dd id="metaPlatform">Python · PyTorch · TransformerLens · Academic paper</dd></div>
+    </dl>
+  </header>
+
+  <!-- COVER IMAGE -->
+  <div class="cs-cover">
+    <img src="../images/work/clip-lab/cover.jpg" alt="CLIP Lab — AI Safety Research" style="object-fit: contain; background: #fff;" />
+  </div>
+
+  <!-- BODY SECTIONS -->
+  <main class="cs-body">
+
+    <!-- 01 PROBLEM -->
+    <section class="cs-section" aria-labelledby="s1">
+      <h2 id="s1" data-n="01">The problem</h2>
+      <div class="body-text">
+        <p>Safety-aligned language models can be manipulated through jailbreaking prompts to produce outputs that violate their alignment constraints, but <b>why this brittleness exists is poorly understood</b>. Existing evaluations couldn't pinpoint whether safety alignment suppresses unsafe behavior before it emerges or after, or whether jailbreaks exploit the original unsafe pathways or carve entirely new ones.</p>
+        <p>Understanding <b>where and how safety mechanisms operate inside the model</b>, is vital in understanding how to mitigate these biases to have safer models.</p>
+      </div>
+      <!-- <div class="img-block" style="margin-top:24px; aspect-ratio:16/7;">causal tracing diagram — model internals visualization placeholder</div>
+      <p class="img-caption">Causal tracing isolates which layers and components are causally responsible for a model's biased or unbiased predictions, layer by layer across the full network.</p> -->
+    </section>
+
+    <!-- 02 MY ROLE -->
+    <section class="cs-section" aria-labelledby="s2">
+      <h2 id="s2" data-n="02">My role</h2>
+      <div class="body-text">
+        <p>I joined the CLIP Lab as an undergraduate researcher in February 2025, working under a PhD mentor, Navita. <b>I created the literature review</b> by surveying mechanistic interpretability methods and AI safety benchmarks to map the gap the framework addresses and set up and ran the causal tracing and activation patching experiments in PyTorch and TransformerLens.</p>
+        <p>My primary contributions to the paper were the <b>experimental methodology and evaluation sections</b>: the framework design, the WinoBias case study instantiation, and the component-level analysis (MLP vs. attention).</p>
+      </div>
+      <div class="chip-row">
+        <span class="chip">Mechanistic Interpretability</span>
+        <span class="chip">Causal Tracing</span>
+        <span class="chip">Activation Patching</span>
+        <span class="chip">Vocabulary Projection</span>
+        <span class="chip">AI Safety</span>
+        <span class="chip">Gender Bias · WinoBias</span>
+        <span class="chip">LLaMA-2-7B</span>
+        <span class="chip">TransformerLens</span>
+      </div>
+    </section>
+
+    <!-- 03 PROCESS -->
+    <section class="cs-section" aria-labelledby="s3">
+      <h2 id="s3" data-n="03">How I worked through it</h2>
+      <div class="body-text">
+        <p>My PhD mentor was kind enough to take me on for this project when I had a very rudimentary understanding of NLP and interpretability.
+          My process started by me spending 2 months learning NLP fundamentals on <a href="https://huggingface.co/learn/llm-course/en/chapter1/1">huggingface</a>, followed by structured Q&A sessions.
+          This was paired with structured literature review of papers provided to me that were relevant to the experimentation process, followed by drafting the experimentation plan.
+          I took a break from work over the summer, but formally came back to this project by working for 3 credits as a part of the Independent Undergraduate Research Course provided by my college.
+          I spent the semester adapting an existing causal tracing codebase for my dataset (The Winobias dataset), and running experiments with weekly check-ins for guidance from my mentor.
+          Towards the end of the course, I submitted my draft of the literature review and the paper along with my experiment results. 
+        </p>
+      </div>
+      <div class="process-steps">
+        <div class="ps-item">
+          <div class="ps-num">1</div>
+          <div class="ps-content">
+            <h3>Literature review &amp; gap mapping</h3>
+            <p>Starting from a seed set of papers from my PhD mentor Navita - including a survey paper — I traced citations outward across mechanistic interpretability and AI safety evaluation. The key gap I found was that no paper combined internal circuit analysis with a repeatable, domain-grounded safety evaluation protocol.</p>
+          </div>
+        </div>
+        <div class="ps-item">
+          <div class="ps-num">2</div>
+          <div class="ps-content">
+            <h3>Framework design</h3>
+            <p>We formalized three research questions — how safety alignment works internally, how jailbreaking works, and what the performance impact of editing both pathway types is — and designed a domain-agnostic framework around them. The framework applies three complementary techniques comparatively across baseline, safety-prompted, and jailbreak-prompted model variants.</p>
+          </div>
+        </div>
+        <div class="ps-item">
+          <div class="ps-num">3</div>
+          <div class="ps-content">
+            <h3>Case study: gender bias in coreference resolution</h3>
+            <p>We instantiated the framework using the WinoBias dataset as a well-controlled testbed where "unsafe" behavior — gender-stereotyped coreference predictions — is precisely measurable. Running baseline experiments on LLaMA-2-7B across 50 pro-stereotypical / anti-stereotypical sentence pairs, I traced how biased predictions emerge layer by layer and which model components drive them.</p>
+          </div>
+        </div>
+        <div class="ps-item">
+          <div class="ps-num">4</div>
+          <div class="ps-content">
+            <h3>Causal tracing &amp; activation patching experiments</h3>
+            <p>Using PyTorch and TransformerLens, I implemented corrupted-with-restoration causal tracing, MLP vs. attention activation patching, and vocabulary projection to track logit trajectories across all 32 layers of LLaMA-2-7B. Results revealed that bias is largely stable in layers 0–10, diverges sharply in layers 11–20, and crystallizes by layers 21–31 — pointing to the middle layers as the primary site of biased representation formation. This finding was corroborated by existing research papers applying similar techniques to understanding bias emergence.</p>
+          </div>
+        </div>
+        <div class="ps-item">
+          <div class="ps-num">5</div>
+          <div class="ps-content">
+            <h3>Component-level analysis &amp; interpretation</h3>
+            <p>A key finding emerged from separating attention and MLP contributions in late layers (26–31): attention heads showed a positive pro-stereotypical logit difference (mean +1.08), while MLP layers showed a negative difference (mean −2.04), actively countering stereotypical associations. The net pro-stereotypical output reflects attention dominating over MLP suppression, making attention heads the higher-leverage intervention target.</p>
+          </div>
+        </div>
+        <div class="ps-item">
+          <div class="ps-num">6</div>
+          <div class="ps-content">
+            <h3>Paper writing &amp; iteration</h3>
+            <p>I drafted the methodology, case study, and preliminary results sections, and prepared the layer-wise probability plots, logit difference trajectory figures, and late-layer component comparison charts.</p>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="img-row" style="margin-top:28px;">
+        <div>
+          <div class="img-block">layer-wise bias emergence — WinoBias causal tracing results</div>
+          <p class="img-caption">Probability divergence between pro- and anti-stereotypical inputs begins at layer 11, crosses the 0.5 threshold at layer 24, and stabilizes by layer 30 — pinpointing middle layers as the primary site of bias formation.</p>
+        </div>
+        <div>
+          <div class="img-block">MLP vs. attention component effects — late layers 26–31</div>
+          <p class="img-caption">Attention heads maintain positive pro-stereotypical logit differences (mean +1.08) while MLP layers actively counter them (mean −2.04), revealing opposing internal pressures that the net output obscures.</p>
+        </div>
+      </div> -->
+    </section>
+
+    <!-- 04 OUTCOMES -->
+    <section class="cs-section" aria-labelledby="s4">
+      <h2 id="s4" data-n="04">Summary statistics</h2>
+      <div class="body-text">
+        <p>The research produced a novel interpretability framework and empirical findings that give the lab a mechanistic foundation for follow-on alignment intervention work.</p>
+      </div>
+      <ul class="outcome-list">
+        <li>
+          <div class="stat">1</div>
+          <div class="desc">paper co-authored.</div>
+        </li>
+        <li>
+          <div class="stat">A</div>
+          <div class="desc">grade achieved in my 3 credit class.</div>
+        </li>
+        <li>
+          <div class="stat">1000+</div>
+          <div class="desc">lines of code adapted to fit the novel framework.</div>
+        </li>
+        <!-- <li>
+          <div class="stat">Lost Count</div>
+          <div class="desc">of the number of times experiments were run.</div>
+        </li> -->
+      </ul>
+    </section>
+
+    <!-- 05 WHAT I LEARNED -->
+    <section class="cs-section" aria-labelledby="s5">
+      <h2 id="s5" data-n="05">What I learned</h2>
+      <div class="body-text">
+        <p>Eleven months in academic research taught me how to learn complex concepts quickly and ask the right questions. 
+          It taught me how to think critically, to craft creative ways to understand LLMs, and gave me the technical fluency to communicate what I found. 
+          It also made me reflect deeply about the fairness of the systems we build for the people they will serve.</p>
+      </div>
+      <div class="learning-grid">
+        <div class="lg-item"><h3>What worked</h3><p>I was given a choice by my PhD mentor in whether I'd like to dive straight in to coding or spend some time studying first. I ended up opting for a hybrid approach - learning NLP basics while reading papers relevant to the experimentation process - and I am glad I made this choice. What I learned stayed with me and remains useful to me to this day. </p></div>
+        <div class="lg-item"><h3>What I'd change</h3><p>I would establish checkpoints earlier in the experiment pipeline. Several analyses I wrote up were later superseded when cleaner methodology was agreed on.</p></div>
+        <div class="lg-item"><h3>Unexpected challenge</h3><p>Translating mechanistic findings — which are probabilistic, model-specific, and layer-granular — into clean prose claims for a paper. Academic writing demands a level of precision I underestimated.</p></div>
+        <div class="lg-item"><h3>Skill gained</h3><p>Hands-on fluency with model internals and a working ability to read and critically evaluate papers, like whether their causal claims are actually supported by the experimental design.</p></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- NEXT PROJECT -->
+  <div class="cs-next">
+    <div class="next-label">Next project</div>
+    <a class="next-card" href="nomura.html">
+      <div class="info">
+        <div class="role">Market Risk IT Intern</div>
+        <div class="company">Nomura Securities International</div>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+  </div>
+
+</div>
+<script src="../js/case-study.js"></script>
+<script src="../js/nav.js"></script>
+<script src="../js/next-project.js"></script>
+</body>
+</html>

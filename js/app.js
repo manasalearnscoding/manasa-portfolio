@@ -53,7 +53,7 @@
   ];
 
   var CAPABILITIES = [
-    { h: "Technical Depth", p: "I work from the inside out - I can read the spec, the paper, and the pull request" },
+    { h: "Technical Depth", p: "I work from the inside out - I can read the spec, the paper, and the pull request." },
     { h: "Product Execution", p: "I create user flows, wireframes, interaction design, and high-fidelity prototypes that feel inevitable." },
     { h: "Discovery & Research", p: "I lead client discovery sessions that surface operational pain points from conversation and find the real problem before writing a line of requirements." },
     { h: "Design & Prototyping", p: "I bridge research and engineering by creating user flows, journey maps, information architecture, and a design system from scratch under a time crunch." }
@@ -268,106 +268,6 @@
       });
     }, { rootMargin: "-45% 0px -45% 0px", threshold: 0 });
     sections.forEach(function (s) { io.observe(s); });
-  })();
-
-  /* ==================================================================
-     9.  SIDEQUESTS — door zoom-through transition
-         Door click: overlay clips from door rect → full screen, then navigate.
-         First nav visit scrolls to #sidequests; after that, navigates directly.
-     ================================================================== */
-  (function door() {
-    var btn = document.getElementById("doorBtn");
-    var SQ_KEY    = "sidequestsVisited";
-    var SQ_ENTER  = "sqEnter";
-    var SQ_RETURN = "sqReturn";
-
-    function hasVisitedSq() {
-      try { return localStorage.getItem(SQ_KEY) === "1"; } catch (e) { return false; }
-    }
-    function markSqVisited() {
-      try { localStorage.setItem(SQ_KEY, "1"); } catch (e) {}
-    }
-    function saveReturnState() {
-      try {
-        sessionStorage.setItem(SQ_RETURN, JSON.stringify({
-          scrollY: window.pageYOffset || window.scrollY || 0
-        }));
-      } catch (e) {}
-    }
-
-    function openDoor() {
-      if (!btn) return;
-      markSqVisited();
-      saveReturnState();
-
-      var r  = btn.getBoundingClientRect();
-      var vw = window.innerWidth;
-      var vh = window.innerHeight;
-
-      // Save door rect so sidequests.html can start clipped there and expand
-      try {
-        sessionStorage.setItem(SQ_ENTER, JSON.stringify({
-          top:    Math.round(r.top),
-          right:  Math.round(vw - r.right),
-          bottom: Math.round(vh - r.bottom),
-          left:   Math.round(r.left)
-        }));
-      } catch (e) {}
-
-      var clipClosed =
-        "inset(" +
-        Math.round(r.top)         + "px " +
-        Math.round(vw - r.right)  + "px " +
-        Math.round(vh - r.bottom) + "px " +
-        Math.round(r.left)        + "px " +
-        "round 100px 100px 8px 8px)";
-
-      // Overlay div — same paper colour as sidequests.html so the handoff is seamless
-      var overlay = document.createElement("div");
-      overlay.setAttribute("aria-hidden", "true");
-      overlay.style.cssText = [
-        "position:fixed", "inset:0",
-        "background:#fafaf8",
-        "z-index:400",
-        "clip-path:" + clipClosed,
-        "transition:clip-path 0.75s cubic-bezier(0.6,0,0.2,1)",
-        "pointer-events:none"
-      ].join(";");
-      document.body.appendChild(overlay);
-
-      requestAnimationFrame(function () {
-        requestAnimationFrame(function () {
-          overlay.style.clipPath = "inset(0px 0px 0px 0px round 0px)";
-          setTimeout(function () {
-            window.location.href = "sidequests.html";
-          }, 760);
-        });
-      });
-    }
-
-    // Nav link: first click scrolls to section; after visited, navigates directly
-    var sqNav = document.querySelector('a[href="#sidequests"]');
-    if (sqNav) {
-      sqNav.addEventListener("click", function (e) {
-        if (!hasVisitedSq()) return; // let default anchor scroll happen
-        e.preventDefault();
-        markSqVisited();
-        saveReturnState();
-        window.location.href = "sidequests.html";
-      });
-    }
-
-    if (!btn) return;
-
-    btn.addEventListener("click", function () {
-      if (reduceMotion) {
-        markSqVisited();
-        saveReturnState();
-        window.location.href = "sidequests.html";
-        return;
-      }
-      openDoor();
-    });
   })();
 
 })();

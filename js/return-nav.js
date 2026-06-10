@@ -1,16 +1,13 @@
-/* Save / restore home scroll when visiting work.html or sidequests.html */
+/* Save / restore home scroll when visiting work.html */
 (function () {
   "use strict";
 
   var KEY = "portfolioReturn";
   var RESTORE = "portfolioRestorePending";
-  var SQ_RETURN  = "sqReturn";
-  var SQ_RESTORE = "sqRestorePending";
   var HOME = "index.html";
   var path = decodeURIComponent(location.pathname || "");
-  var isHome        = /index\.html$/.test(path) || path === "/" || path === "" || /\/$/.test(path);
-  var isWork        = /work\.html$/.test(path);
-  var isSidequests  = /sidequests\.html$/.test(path);
+  var isHome = /index\.html$/.test(path) || path === "/" || path === "" || /\/$/.test(path);
+  var isWork = /work\.html$/.test(path);
 
   function activeHash() {
     if (location.hash) return location.hash;
@@ -72,41 +69,20 @@
     } catch (e) {}
   }
 
-  function restoreSqPosition() {
-    try {
-      if (sessionStorage.getItem(SQ_RESTORE) !== "1") return;
-      sessionStorage.removeItem(SQ_RESTORE);
-      var data = JSON.parse(sessionStorage.getItem(SQ_RETURN) || "null");
-      if (!data || typeof data.scrollY !== "number") return;
-      function applyScroll() { window.scrollTo({ top: data.scrollY, left: 0, behavior: "auto" }); }
-      applyScroll();
-      requestAnimationFrame(applyScroll);
-      setTimeout(applyScroll, 0);
-      setTimeout(applyScroll, 50);
-      setTimeout(applyScroll, 150);
-      setTimeout(applyScroll, 300);
-    } catch (e) {}
-  }
-
   if (isHome) {
     document.addEventListener("click", function (e) {
       var link = e.target.closest && e.target.closest('a[href="work.html"]');
       if (link) saveReturn();
     }, true);
 
-    function runHomeRestores() {
-      restorePosition();
-      restoreSqPosition();
-    }
-
     if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", runHomeRestores);
+      document.addEventListener("DOMContentLoaded", restorePosition);
     } else {
-      runHomeRestores();
+      restorePosition();
     }
-    window.addEventListener("load", runHomeRestores);
+    window.addEventListener("load", restorePosition);
     window.addEventListener("pageshow", function (e) {
-      if (e.persisted) runHomeRestores();
+      if (e.persisted) restorePosition();
     });
   }
 
@@ -117,17 +93,6 @@
       back.addEventListener("click", function () {
         try { sessionStorage.setItem(RESTORE, "1"); } catch (e) {}
         back.href = getReturnHref();
-      });
-    }
-  }
-
-  if (isSidequests) {
-    var sqBack = document.querySelector(".page-back");
-    if (sqBack) {
-      sqBack.href = HOME;
-      sqBack.addEventListener("click", function () {
-        try { sessionStorage.setItem(SQ_RESTORE, "1"); } catch (e) {}
-        sqBack.href = HOME;
       });
     }
   }

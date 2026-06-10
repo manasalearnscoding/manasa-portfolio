@@ -29,7 +29,7 @@
         <li><a href="../work.html">All Work</a></li>
         <li><a href="../index.html#skills">Skills</a></li>
         <li><a href="../index.html#about">About</a></li>
-        <li><a href="../index.html#sidequests">Sidequests</a></li>
+        
         <li><a href="../index.html#contact">Contact</a></li>
       </ul>
     </nav>
@@ -82,8 +82,10 @@
     <section class="cs-section" aria-labelledby="s1">
       <h2 id="s1" data-n="01">The problem</h2>
       <div class="body-text">
-        <p>Nonprofits in the DC–Maryland–Virginia area often run critical operations — volunteer coordination, client intake, resource matching — on spreadsheets, email threads, and legacy tools they've outgrown or that don't quite fit their operations well.</p>
-        <p>Hack4Impact's model is to build software for nonprofits pro bono, but the quality of what gets built depends entirely on the quality of the problem statement and the brief that goes into it. If the sourcing process is shallow, development teams can build the wrong thing. <b>My job was to make sure that never happened.</b></p>
+        <p>Nonprofits in the DC–Maryland–Virginia area often run critical operations — volunteer coordination, client intake, resource matching — on tools they've outgrown or that don't quite fit their operations well.</p>
+        <p>Hack4Impact's model is to build software for nonprofits pro bono. At UMD, we have multiple teams working on nonprofit projects concurrently complete with engineers, product managers, designers, tech leads etc.</p>
+        <p>As a part of the sourcing team, my work was to discover and surface operational pain points for these nonprofits, ensuring the work was challenging and novel enough for our student teams and useful for the nonprofit clients as well.</p>
+        </p>
       </div>
       <!-- <div class="img-block" style="margin-top:24px; aspect-ratio:16/7;">nonprofit discovery landscape — DMV area outreach map placeholder</div>
       <p class="img-caption">The DMV nonprofit landscape we mapped: organizations by sector, tech maturity, and fit for Hack4Impact's development capacity.</p> -->
@@ -95,7 +97,7 @@
       <h2 id="s2" data-n="02">My role</h2>
       <div class="body-text">
         <p>As a Sourcing Team member, <b>I personally owned the cold outreach and discovery process for my pipeline of nonprofits</b>. That meant researching organizations <b>(a process I automated for myself)</b>, personalizing outreach messages, running discovery calls, synthesizing what I heard, and producing the PRDs that development teams use to scope and build solutions.</p>
-        <p>I was, like all sourcing members, responsible for my own nonprofit relationships end-to-end. This was done by outreach and follow-ups, leading calls, synthesizing pain-points, and creating PRDs.</p>
+        <p>I was, like all sourcing members, responsible for my own nonprofit relationships end-to-end.</p>
       </div>
       <div class="chip-row">
         <span class="chip">Customer Discovery</span>
@@ -124,7 +126,7 @@
               I then prompted it with the guidelines on standards for client organization which focussed on organization age, mission, need, etc. 
               It parallely searched the current semester's sourcing database to prevent overlap, and previous semester's organizations to see if they had turned down an offer, opted for a follow up, or ghosted us. 
               It then returned the organization's name, age, where it is based, the issue it solves, the names and emails of executives I could reach out to, and potential areas of need.
-              From the list of results, I vetted the organizations by personally verifying each org's program and mission against the set standards. 
+              From the list of results, I vetted the organizations by personally verifying the information returned and each organization's program and mission against the set standards. 
               If a program did not meet a standard or was "hallucinated", I prompted it with the changes to be incorporated in the research process before asking it to research some more.</p>
           </div>
         </div>
@@ -132,9 +134,11 @@
           <div class="ps-num">2</div>
           <div class="ps-content">
             <h3>Cold outreach</h3>
-            <p>From the list of vetted organizations, I had Claude populate the given outreach template with information like the organizations name, but <b>handwrote</b> the sections where I explained to to program directors and executive directors why their work/mission would be a good fit for us. 
+            <p>From the list of vetted organizations, I had Claude populate the given outreach template with information like the organizations name, but <b>handwrote</b> the sections where I explained to program directors and executive directors why their work/mission would be a good fit for us. 
               These sections also referenced something specific about the organization's work and asked them to respond or set up a time to chat explore whether there was a fit. 
-              I incorporated specific problem hypotheses and examples of our previous work to boost response rates.</p>
+              I often incorporated specific problem hypotheses and examples of our previous work to boost response rates.
+              I also had Claude populate our database with entries of organizations I had reached out to, and verified this information manually.
+            </p>
           </div>
         </div>
         <div class="ps-item">
@@ -144,8 +148,9 @@
             <p>On calls, I introduced the clients to Hack4Impact, the work we had done, the timeline of the project, and answered any questions. 
               I took time to understand the ethos of the organization, their daily operations, and asked founders to highlight pain points. 
               I asked about their current workflows, where things broke down, and what they'd already tried. 
-              Clients often had a good understanding of the technology they needed and what worked/ didn't work, but did not have the capability or resources to execute it.
-              When clients could't communicate the issue technically, I often proposed high level technical solutions that would help them, which they either corrected or contributed to. This helped course correct my ideas and often surfaced more pain points worth addressing.
+              Clients often had a good understanding of the technology they needed and what worked/didn't work, but did not have the capability or resources to execute it.
+              When clients couldn't communicate the issue technically, I often proposed high level technical solutions that would help them, which they either corrected or contributed to. 
+              This helped course correct my understanding of their needs and often surfaced more pain points worth addressing.
               I concurrently took structured notes mapping each pain point to the role experiencing it, the frequency, and the downstream consequence.</p>
           </div>
         </div>
@@ -153,15 +158,15 @@
           <div class="ps-num">4</div>
           <div class="ps-content">
             <h3>Synthesis &amp; persona development</h3>
-            <p>After each call, I created user personas along with their goals and constraints. This grounded the PRD in real behavior rather than abstract requirements, and gave development teams someone concrete to design for.</p>
+            <p>After each call, I created user personas along with their goals and constraints. This grounded the PRD in real behavior. I also would jot down some potential ideas as I gained a clearer understanding of their operations.</p>
           </div>
         </div>
         <div class="ps-item">
           <div class="ps-num">5</div>
           <div class="ps-content">
             <h3>PRD writing &amp; MVP scoping</h3>
-            <p>I then translated discovery findings into PRDs covering: the problem statement, user personas, proposed solution, MVP feature set with prioritization rationale, and out-of-scope items. 
-              I prioritized ruthlessly since a student team can build only one thing well in a semester, so every PRD had a clear MVP core.</p>
+            <p>I then translated discovery findings into PRDs covering: the project timeline, the problem statement, context, user types and flows, current and desired solutions, and a proposed solution. 
+              I prioritized between multiple problem statements ruthlessly since a student team can build only one thing well in a semester.</p>
           </div>
         </div>
       </div>
@@ -181,7 +186,7 @@
     <section class="cs-section" aria-labelledby="s4">
       <h2 id="s4" data-n="04">What it achieved</h2>
       <div class="body-text">
-        <p>The sourcing work directly feeds Hack4Impact's project pipeline — every PRD I write is a potential semester-long build for a student dev team and a real tool for a nonprofit that otherwise couldn't afford one. The project must be challenging and novel enough for our student team, but also genuinely helpful for the nonprofit.</p>
+        <p>The sourcing work directly feeds Hack4Impact's project pipeline — every PRD I write is a potential semester-long build for a student dev team and a real tool for a nonprofit that otherwise couldn't afford one.</p>
       </div>
       <ul class="outcome-list">
         <li>
@@ -198,7 +203,7 @@
         </li>
         <li>
           <div class="stat">1</div>
-          <div class="desc">Organization currently under review for project implementation, after I participated in a makeathon to design a system for them (See the <b>first place win on the next page</b> by <a href="crewcreate.html">clickig here</a> or scrolling below and clicking next project.)
+          <div class="desc">Organization currently under review for project implementation, after I participated in a makeathon to design a system for them (See the <b>first place win on the next page</b> by scrolling below and clicking next project.)
         </li>
       </ul>
     </section>
@@ -207,13 +212,13 @@
     <section class="cs-section" aria-labelledby="s5">
       <h2 id="s5" data-n="05">What I learned</h2>
       <div class="body-text">
-        <p>Sourcing is the highest-leverage point in the entire Hack4Impact pipeline — a vague brief produces a mediocre build no matter how talented the engineers are. I came away with a new respect for the discipline of problem framing.</p>
+        <p>Sourcing is the highest-leverage point in the entire Hack4Impact pipeline as a vague brief produces a mediocre build no matter how talented the engineers are. I came away with a new respect for the discipline of problem framing.</p>
       </div>
       <div class="learning-grid">
         <div class="lg-item"><h3>What worked</h3><p>Asking about workflows before asking about technology. My instinct is to problem solve, but I resisted the urge to jump to solutions, which led to me hearing something on the call that reframed the actual problem and improved the PRD.</p></div>
-        <div class="lg-item"><h3>What I'd change</h3><p>I would ask the nonprofits to send an "agenda" of the issue they wanted to discuss in our call once they responded. This is becuase a lot of the nonprofits had redundant issues (for ex. having a organised database of volunteer information), which would not require meetings but instead a standardised solution tailored to them.</p></div>
-        <div class="lg-item"><h3>Unexpected challenge</h3><p>Nonprofit stakeholders often have a solution already in mind when they get on a call. Redirecting the conversation to scope out the other/underlying problems without making them feel dismissed required more facilitation skill than I expected.</p></div>
-        <div class="lg-item"><h3>Skill gained</h3><p>Writing PRDs that are useful to an engineering team, keeping the information I want to convery comprehensive but structured.</p></div>
+        <div class="lg-item"><h3>What I'd change</h3><p>I would ask the nonprofits to send an "agenda" of the issue they wanted to discuss in our call to ask more pointed questions sooner if the clients already knew what they wanted. Everyone appreciates brevity.</p></div>
+        <div class="lg-item"><h3>Unexpected challenge</h3><p>Nonprofit stakeholders often have a solution already in mind when they get on a call. Redirecting the conversation to scope out the underlying problems without making them feel dismissed required more facilitation skill than I expected.</p></div>
+        <div class="lg-item"><h3>Skill gained</h3><p>Writing PRDs that are useful to an engineering team, keeping the information I want to convey comprehensive but structured.</p></div>
       </div>
     </section>
 
@@ -222,10 +227,10 @@
   <!-- NEXT PROJECT -->
   <div class="cs-next">
     <div class="next-label">Next project</div>
-    <a class="next-card" href="crewcreate.html">
+    <a class="next-card" href="hack4impact-vms.html">
       <div class="info">
-        <div class="role">🏆 First Place — CrewCreate</div>
-        <div class="company">TechTurnUp × UXTerps × Hack4Impact</div>
+        <div class="role">Hack4Impact VMS</div>
+        <div class="company">Engineering</div>
       </div>
       <div class="arrow">→</div>
     </a>
@@ -234,5 +239,6 @@
 </div>
 <script src="../js/case-study.js"></script>
 <script src="../js/nav.js"></script>
+<script src="../js/next-project.js"></script>
 </body>
 </html>

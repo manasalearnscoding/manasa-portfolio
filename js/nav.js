@@ -38,21 +38,3 @@
     if (!e.matches) setOpen(false);
   });
 })();
-
-/* Sidequests nav — skip scroll after first visit */
-(function () {
-  "use strict";
-
-  var SQ_KEY = "sidequestsVisited";
-  var visited = false;
-  try { visited = localStorage.getItem(SQ_KEY) === "1"; } catch (e) {}
-
-  if (!visited) return;
-
-  document.querySelectorAll(".nav-links a[href]").forEach(function (link) {
-    var href = link.getAttribute("href");
-    if (href && href.indexOf("#sidequests") !== -1 && href !== "#sidequests") {
-      link.setAttribute("href", "sidequests.html");
-    }
-  });
-})();
